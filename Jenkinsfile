@@ -1,11 +1,14 @@
 pipeline {
     agent any
+    environment {
+        VER = '1.2.3'
+    }
     
     stages {
         stage("build") {
             steps {
                 echo 'Building...'
-                echo 'PROBABLY built...'
+                echo "Version: ${VER}"
             }
         }
 
