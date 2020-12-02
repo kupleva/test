@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         VER = '1.2.3'
-        CREDS = credentials('server-credentials')
+        MY_CREDS = credentials('server-credentials')
     }
     
     stages {
@@ -22,7 +22,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'Deploying...'
-                echo "CREDS: ${CREDS}"
+                echo "MY_CREDS: ${MY_CREDS}"
             }
         }
     }
